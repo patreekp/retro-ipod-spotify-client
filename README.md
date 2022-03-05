@@ -1,6 +1,6 @@
 # sPot
 
-This code belongs to dupontgu (https://github.com/dupontgu/retro-ipod-spotify-client), i've just forked is branch to make some changes and adjustments based on my subjective preferences
+This code belongs to dupontgu (https://github.com/dupontgu/retro-ipod-spotify-client), i've just forked his branch to make some changes and adjustments based on my subjective preferences
 
 
 Changelog:
