@@ -18,8 +18,8 @@ import os
 LARGEFONT =("ChicagoFLF", 90) 
 MED_FONT =("ChicagoFLF", 70) 
 SCALE = 1
-SPOT_GREEN = "#1DB954"
-SPOT_BLACK = "#191414"
+SPOT_GREEN = "#35407c"
+SPOT_BLACK = "#c2d0ee"
 SPOT_WHITE = "#FFFFFF"
 
 UDP_IP = "127.0.0.1"
@@ -313,7 +313,7 @@ class StartPage(tk.Frame):
         self.configure(bg=SPOT_BLACK)
         header_container = tk.Canvas(self, bg=SPOT_BLACK, highlightthickness=0, relief='ridge')
         header_container.grid(sticky='we')
-        self.header_label = tk.Label(header_container, text ="sPot", font = LARGEFONT, background=SPOT_BLACK, foreground=SPOT_GREEN) 
+        self.header_label = tk.Label(header_container, text ="iPod", font = LARGEFONT, background=SPOT_BLACK, foreground=SPOT_GREEN) 
         self.header_label.grid(sticky='we', column=1, row=0, padx=(0, 10))
         self.play_indicator = tk.Label(header_container, image=self.space_image, background=SPOT_BLACK)
         self.play_indicator.grid(sticky='w', column=0, row=0, padx=(70 * SCALE,0))
@@ -446,19 +446,19 @@ def processInput(app, input):
 
 def onKeyPress(event):
     c = event.keycode
-    if (c == UP_KEY_CODE):
+    if (c == UP_KEY_CODE or c == 40):
         onUpPressed()
-    elif (c == DOWN_KEY_CODE):
+    elif (c == DOWN_KEY_CODE or c == 38):
         onDownPressed()
-    elif (c == RIGHT_KEY_CODE):
+    elif (c == RIGHT_KEY_CODE or c == 39):
         onSelectPressed()
-    elif (c == LEFT_KEY_CODE):
+    elif (c == LEFT_KEY_CODE or c == 37):
         onBackPressed()
-    elif (c == NEXT_KEY_CODE):
+    elif (c == NEXT_KEY_CODE or c == 16):
         onNextPressed()
-    elif (c == PREV_KEY_CODE):
+    elif (c == PREV_KEY_CODE or c == 17):
         onPrevPressed()
-    elif (c == PLAY_KEY_CODE):
+    elif (c == PLAY_KEY_CODE or c == 13):
         onPlayPressed()
     else:
         print("unrecognized key: ", c)

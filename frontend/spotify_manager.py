@@ -77,7 +77,7 @@ scope = "user-follow-read," \
 
 DATASTORE = datastore.Datastore()
 
-sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope=scope))
+sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id="1e9570a3ade34dbf80acf59be167c097", client_secret="bbd732a325ee42a99a9a1d23c9f56d0b", redirect_uri="http://127.0.0.1:8080", scope=scope))
 pageSize = 50
 has_internet = False
 
